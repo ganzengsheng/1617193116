@@ -1,0 +1,63 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+class Student:
+   'ËùÓÐÑ§ÉúµÄÐÅÏ¢'
+   stuCount = 0
+ 
+   def __init__(self,name,stu_no,stu_class,male,gender):
+      self.name = name
+      self.stu_no = stu_no
+      self.stu_class = stu_class
+      self.male = male
+      self.gender = gender
+      Student.stuCount += 1
+
+   def study(self):
+      print "Student can study"
+ 
+   def getStuCount(self):
+      print Student.stuCount
+ 
+      
+class HighschoolStudent(Student):
+   primarystuCount = 0
+                     
+   def __init__(self,name,stu_no,stu_class,male,gender):
+      self.name = name
+      self.stu_no = stu_no
+      self.stu_class = stu_class
+      self.male = male
+      self.gender = gender
+      Student.stuCount += 1
+      PrimaryStudent.primarystuCount += 1
+   def Recite(self):
+      print "High school Student can recite"
+ 
+   def Oral(self):
+      print "High school Student can oral"
+
+   def Write(self):
+      print "High school Student can write" 
+ 
+ 
+class CollegeStudent(Student):
+   middlestuCount = 0
+   
+   def __init__(self,name,stu_no,stu_class,male,gender):
+      self.name = name
+      self.stu_no = stu_no
+      self.stu_class = stu_class
+      self.male = male
+      sself.gender = gender
+      Student.stuCount += 1
+      MiddleStudent.middlestuCount += 1
+      
+   def Chemistry(self):
+      print "College Student can chemistry"
+
+   def Physics(self):
+      print "College Student can physics" 
+ 
+   def Pyhics(self):
+      print "College Student can pyhics"
